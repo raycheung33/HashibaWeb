@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hashiba</title>
+<meta name="description" content="Hashiba — read Palm eBooks and iSilo .pdb documents on Android, with their formatting, pictures, tables and links intact.">
+<style>
+  /* Same palette and font stack as privacy.html, so the pages read as one
+     site rather than several. */
+  :root {
+    --bg: #ffffff;
+    --fg: #1c1c1e;
+    --muted: #6b6b70;
+    --rule: #e3e3e6;
+    --accent: #0a63c9;
+    --on-accent: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #131315;
+      --fg: #ececee;
+      --muted: #9d9da3;
+      --rule: #2c2c30;
+      --accent: #6ba8f5;
+      --on-accent: #131315;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    padding: 4rem 1.25rem 3rem;
+    background: var(--bg);
+    color: var(--fg);
+    font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, sans-serif;
+  }
+  /* Prose is left-aligned so each line is easy to track back to its start;
+     only the title and the button are centred. */
+  main { max-width: 34rem; margin: 0 auto; }
+  h1 { font-size: 2.25rem; line-height: 1.2; margin: 0 0 1.5rem; letter-spacing: -.02em; text-align: center; }
+  /* The section headings are set in capitals, so the size does the separating:
+     caps at body size read as shouting, caps at this size read as a heading. */
+  h2 {
+    font-size: 1.3rem;
+    line-height: 1.3;
+    letter-spacing: .02em;
+    margin: 2.75rem 0 .75rem;
+  }
+  p { margin: 0 0 1rem; }
+  .lead { font-size: 1.15rem; color: var(--muted); margin-bottom: 2.5rem; }
+  ul { margin: 0 0 1rem; padding-left: 1.2rem; }
+  li { margin-bottom: .6rem; }
+  li b { font-weight: 600; }
+  a { color: var(--accent); }
+  .cta { margin-top: 3.5rem; text-align: center; }
+  .btn {
+    display: block;
+    background: var(--accent);
+    color: var(--on-accent);
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 10px;
+    /* Padding rather than a fixed height, so the target grows with the text at
+       larger accessibility sizes instead of clipping it. */
+    padding: .85rem 1.5rem;
+    min-height: 44px;
+  }
+  .btn:hover { opacity: .9; }
+  .btn:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+  /* The button does nothing for a visitor with no mail client, and it fails
+     silently. This is the copyable way out of that. */
+  .fallback { color: var(--muted); font-size: .9rem; margin: 1rem 0 0; }
+  .note { color: var(--muted); font-size: .9rem; }
+  footer {
+    margin-top: 4rem; padding-top: 1.5rem;
+    border-top: 1px solid var(--rule);
+    color: var(--muted); font-size: .9rem;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<main>
+
+  <h1>Hashiba</h1>
+
+  <p class="lead">Your old Palm eBooks and iSilo documents, readable again on
+  your Android phone, looking the way they were made to look.</p>
+
+  <h2>THE BOOKS YOU ALREADY HAVE</h2>
+  <p>Hashiba opens .pdb files: iSilo documents made by older and newer versions
+  of iSiloX, and PalmDOC eBooks. Pick them with the file picker, or open one
+  from your file manager with “Open with”. Each book is copied into the app, so
+  it stays in your library.</p>
+
+  <h2>FORMATTING KEPT INTACT</h2>
+  <ul>
+    <li><b>Text styles:</b> colours, bold, italic, underline, strikethrough,
+    superscript and subscript.</li>
+    <li><b>Layout:</b> font sizes, paragraph alignment and spacing, and bulleted
+    and nested lists.</li>
+    <li><b>Pictures</b> shown where they sit in the book.</li>
+    <li><b>Tables,</b> including nested tables and cell colours. Wide tables
+    scroll sideways.</li>
+  </ul>
+
+  <h2>LINKS THAT WORK</h2>
+  <ul>
+    <li>Links inside a book jump straight to the right place.</li>
+    <li>Back and Forward take you through where you have been, and Home returns
+    you to the start.</li>
+    <li>Web, email and phone links open in the app that handles them.</li>
+  </ul>
+
+  <h2>COMFORTABLE READING</h2>
+  <ul>
+    <li>Swipe to turn pages.</li>
+    <li>Tap the page to hide the toolbars and read full screen.</li>
+    <li>Make the text bigger or smaller with A− and A+.</li>
+    <li>Dark mode, with the book’s colours adjusted to stay readable.</li>
+    <li>Every book reopens where you stopped reading.</li>
+  </ul>
+
+  <h2>CHINESE AND OTHER LANGUAGES</h2>
+  <p>The text encoding is detected automatically. If a book looks garbled,
+  choose another from the menu: UTF-8, Traditional Chinese (Big5), Simplified
+  Chinese (GBK), Japanese (Shift_JIS) or Western (Windows-1252).</p>
+
+  <h2>PRIVATE BY DESIGN</h2>
+  <p>No account, no ads and no tracking. Hashiba does not even have permission
+  to use the internet: your books never leave your phone.</p>
+
+  <div class="cta">
+    <a class="btn" href="mailto:hello@hashiba-pdbreader.com?subject=Hashiba%20feedback">Send feedback</a>
+
+    <p class="fallback">Or write to
+    <a href="mailto:hello@hashiba-pdbreader.com">hello@hashiba-pdbreader.com</a></p>
+  </div>
+
+  <p class="note">Hashiba is an independent app and is not affiliated with the
+  makers of iSilo or Palm. iSilo and Palm are trademarks of their respective
+  owners.</p>
+
+  <footer><a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Use</a></footer>
+
+</main>
+</body>
+</html>
